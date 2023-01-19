@@ -1,0 +1,75 @@
+<!-- This loads of all of files that you call below from your 'static' folder -->
+{% load static %}
+<!--The static folder consists of your bootstrap files (.css, .js, fonts, etc)-->
+<!--When you load the static folders is calls all those folders in the static files without having to code each one in individually-->
+
+<html>
+  <head>
+    {% block head-meta %}
+  	<meta charset="utf-8">
+    {% endblock %}
+	<title>UWSP PR's</title>
+    {% block head-css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% endblock %}
+  </head>
+
+<!-- This is the start of the navigation bar at the top of the page-->
+<header>
+	<nav class="navbar navbar-expand-sm sticky-top navbar-light">
+		<div class="container">
+			<a class="navbar-brand" href="">UWSP Track and Field PR's</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="">Recent PR's</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">PR's by Event</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- This is where you'll put your page content. Leave it blank for now. -->
+<div class="container" id = "recentprs">
+{% block content %}Nothing Here{% endblock %}
+</div>
+
+
+<!-- This is where the footer begins -->
+<footer>
+<div class="container p-4">
+  <div class="row text-center">
+	<div class="col-md-6 mb-4">
+	  <h5 class="mb-3">About</h5>
+	  <p>
+		I made this website in my freetime, if there are issues you notice with the website you can shoot me an email and I can see if I can fix it, otherwise enjoy the website.
+	  </p>
+	  <a href = "mailto:akopp977@uwsp.edu?subject = UWSP Track PRs Website">Send Email</a>
+	</div>
+	<div class="col-md-6 mb-4">
+	  <h5 class="mb-3" >links</h5>
+	  <ul class="list-unstyled mb-0">
+		<li class="mb-1">
+			<a href="https://www.tfrrs.org/teams/tf/WI_college_m_Wis_Stevens_Point.html">TFFRS</a>
+		</li>
+		<li class="mb-1">
+			<a href="https://athletics.uwsp.edu/sports/track-and-field/schedule">UWSP Track and Field Schedule</a>
+		</li>
+	  </ul>
+	</div>
+  </div>
+</div>
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  © 2023 Austin Kopp
+</div>
+<!-- Copyright -->
+</footer>
+</html>

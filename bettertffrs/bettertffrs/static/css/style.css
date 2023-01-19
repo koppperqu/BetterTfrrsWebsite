@@ -1,0 +1,25 @@
+body{
+	background-color: #492F92;"
+}
+nav{
+	background-color: #FFC425;
+	letter-spacing: 1px;
+}
+#navbar{	
+	letter-spacing: 2px;
+}
+#recentprs{
+	text-align:center;
+	background-color: #FFC425;
+}
+#recentprs ul{
+	width:auto;
+	background-color: #ffdf87;
+}
+footer{
+	background-color: #FFC425;
+	letter-spacing: 2px;
+}
+footer a{
+	color: #4f4f4f;
+}
