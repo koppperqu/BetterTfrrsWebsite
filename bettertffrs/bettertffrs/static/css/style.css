@@ -1,0 +1,30 @@
+body{
+	background-color: #492F92;"
+}
+nav{
+	background-color: #FFC425;
+	letter-spacing: 1px;
+}
+#navbar{	
+	letter-spacing: 2px;
+}
+#recentprs{
+	text-align:center;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+#recentprs li{
+	width:auto;
+	background-color: #FFC425;
+	border-color: #d89d00;
+	letter-spacing: 1px;
+}
+#recentprs h3{
+	letter-spacing: 2px;
+}
+footer{
+	background-color: #FFC425;
+	letter-spacing: 2px;
+}
+footer a{
+	color: #4f4f4f;
+}
