@@ -1,15 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404
-
+from datetime import datetime,timedelta
+import GetLast2WeeksPRs
 # Create your views here.
+lastRanDate=datetime.today().date()
 
 def index(request):
     return render(request, "prs/index.html")
 
 def recentprs(request):
-    import json
-  
-    f = open('../getlast2weeksprs/recentPRs.json')
+    global lastRanDate
+    today = datetime.today().date()
+    tdelta=today-lastRanDate
+    if (tdelta.days>=1):
+        GetLast2WeeksPRs.getLast2WeeksPRs()
+        lastRanDate=today
+    import json  
+    f = open('recentPRs.json')
     data = json.load(f)
     f.close()
     for eachMeet in data:
@@ -28,7 +35,6 @@ def recentprs(request):
                     replacePrsAtMeet.append(rowsOfZ)
                     rowsOfZ=[]
                     counttoZ=0
-
             holdX.append(eachPR)
             countToX+=1
         if(holdX!=[]):
