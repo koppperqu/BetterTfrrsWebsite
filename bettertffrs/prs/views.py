@@ -9,7 +9,7 @@ def index(request):
 def recentprs(request):
     import json
   
-    f = open('../../getlast2weeksprs/recentPRs.json')
+    f = open('../getlast2weeksprs/recentPRs.json')
     data = json.load(f)
     f.close()
     for eachMeet in data:
