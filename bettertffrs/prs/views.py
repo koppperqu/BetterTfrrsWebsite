@@ -12,7 +12,7 @@ def recentprs(request):
     global lastRanDate
     today = datetime.today().date()
     tdelta=today-lastRanDate
-    if (tdelta.days>=1):
+    if (tdelta.days>=0):
         GetLast2WeeksPRs.getLast2WeeksPRs()
         lastRanDate=today
     import json  
