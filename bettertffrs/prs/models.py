@@ -5,7 +5,6 @@ class Athlete(models.Model):
     athlete_id = models.AutoField(primary_key=True)
     athlete_name = models.CharField(max_length=50)
     tffrs_link_for_athlete = models.CharField(max_length=100)
-    athlete_gender_male = models.BooleanField()
     def __str__(self):
         return(self.athlete_name)
 

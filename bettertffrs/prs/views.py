@@ -6,13 +6,10 @@ import GetLast2WeeksPRs
 lastRanDate=datetime.today().date()
 
 def index(request):
-    return render(request, "prs/index.html")
-
-def recentprs(request):
     global lastRanDate
     today = datetime.today().date()
     tdelta=today-lastRanDate
-    if (tdelta.days>=0):
+    if (tdelta.days>=1):
         GetLast2WeeksPRs.getLast2WeeksPRs()
         lastRanDate=today
     import json  
@@ -43,6 +40,7 @@ def recentprs(request):
             replacePrsAtMeet.append(rowsOfZ)
         eachMeet['prsatmeet']=replacePrsAtMeet
     return render(request, 'prs/index.html', {'data':data})
+
 
 def athlete(request, athlete_id):
     return HttpResponse("Your looking at athlete with id %s." %athlete_id)
