@@ -23,39 +23,42 @@ def getEventsandPRSandAddToDB(names,tfrrsLinks):
     con = sqlite3.connect("db.sqlite3")
     cur = con.cursor()
     for nameIndex,eachName in enumerate(names):
-        res = cur.execute("select count(*) from Athlete where athlete_name = ?",(eachName,))
+        res = cur.execute("select count(*) from prs_athlete where athlete_name = ?",(eachName,))
         count = res.fetchone()[0]
         if(count==0):
-            cur.execute("insert into Athlete (athlete_name,tffrs_link_for_athlete) values(?,?)",(eachName,tfrrsLinks[nameIndex]))
+            cur.execute("insert into prs_athlete (athlete_name,tffrs_link_for_athlete) values(?,?)",(eachName,tfrrsLinks[nameIndex]))
             con.commit()
     for tfrrLinkindex,eachLink in enumerate(tfrrsLinks):#goes through each persons tfrrs page
-        html = urlopen('https:'+eachLink)
+        print (eachLink)
+        html = urlopen(eachLink)
         soup=BeautifulSoup(html.read(), "html.parser")
         bests=soup.find('table',class_='table bests')#grabs the personal bests table
         bestsTD=bests.findAll('td')
         events=[]
         marks=[]
-        athleteID = cur.execute("select athlete_id from Athlete where athlete_name = ?",(names[tfrrLinkindex],)).fetchone()[0]
+        athleteID = cur.execute("select athlete_id from prs_athlete where athlete_name = ?",(names[tfrrLinkindex],)).fetchone()[0]
         for index,each in enumerate(bestsTD):
             if index%2==0:
                 events.append(each.getText().strip())
             else:
                 marks.append(each.getText().strip())
         for eventIndex, eachEvent in enumerate(events):
-            res = cur.execute("select count(*) from Event where event_name = ?",(eachEvent,))
+            if eachEvent=="":
+                break
+            res = cur.execute("select count(*) from prs_event where event_name = ?",(eachEvent,))
             count = res.fetchone()[0]
             if(count==0):
-                cur.execute("insert into Event (event_name) values(?)",(eachEvent))
+                cur.execute("insert into prs_event (event_name) values(?)",(eachEvent,))
                 con.commit()
-            eventID = cur.execute("select event_id Event where event_name = ?",(eachEvent,)).fetchone()[0]
-            res = cur.execute("select count(*) from Personal_Record where event = ? and athlete = ?",(eventID,athleteID))
+            eventID = cur.execute("select event_id from prs_event where event_name = ?",(eachEvent,)).fetchone()[0]
+            res = cur.execute("select count(*) from prs_personal_record where event_id = ? and athlete_id = ?",(eventID,athleteID))
             count = res.fetchone()[0]
             if(count==0):
-                cur.execute("insert into Personal_Record (athlete,event,pr) values(?,?,?)",(athleteID,eventID,marks[index]))
+                cur.execute("insert into prs_personal_record (athlete_id,event_id,pr) values(?,?,?)",(athleteID,eventID,marks[eventIndex]))
                 con.commit()
             else:
-                prID = "select pr_id from Personal_Record where event = ? and athlete = ?",(eventID,athleteID)
-                cur.execute("update Personal_Record set pr = ? where pr_id = ?",(marks[index],prID,))
+                prID = "select pr_id from prs_personal_record where event_id = ? and athlete_id = ?",(eventID,athleteID)
+                cur.execute("update prs_personal_record set pr = ? where pr_id = ?",(marks[eventIndex],prID,))
                 con.commit()
     con.close()
 
