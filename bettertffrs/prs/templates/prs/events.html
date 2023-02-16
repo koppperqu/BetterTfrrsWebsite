@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container"><h3 class="py-3 mb-0">
+        <h2>Events</h2>
+    <div class="container">
+            <div class="col-6">
+                <!-- method 1 - sizing classes -->
+                <div class="list-group d-flex flex-row flex-wrap">
+                    {%for each in data%}
+                    <a href="/prs/events/{{each.event_id}}" class="list-group-item w-50 list-group-item-action">
+                    {{each}}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

@@ -8,13 +8,13 @@ daysToRemove = 14
 mensTrackURL = 'https://www.tfrrs.org/teams/tf/WI_college_m_Wis_Stevens_Point.html'
 html = urlopen(mensTrackURL)
 soup=BeautifulSoup(html.read(), "html.parser")
-womensTrackURL = 'https://www.tfrrs.org'+soup.find('a',text='Women\'s Track & Field')['href']
+womensTrackURL = 'https://www.tfrrs.org'+soup.find('a',string='Women\'s Track & Field')['href']
 
 #This functon takes the input ur and finds the roster section on the page then grabs all the names and tffrs links and returns them as a dictionary as key value pairs name is the key
 def getAthletesNamesAndTffrsLinks(url):
     html = urlopen(url)
     soup=BeautifulSoup(html.read(), "html.parser")
-    athleteLinks = soup.find('h3',text='ROSTER').find_parent().find('tbody').findAll('a')
+    athleteLinks = soup.find('h3',string='ROSTER').find_parent().find('tbody').findAll('a')
     names=[]
     tffrsLink=[]
     for eachLink in athleteLinks:

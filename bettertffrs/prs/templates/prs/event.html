@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container"><h3 class="py-3 mb-0">
+    <h2>{{data.0.event}}</h2>
+    <div class="container">
+            <div class="col-10">
+                <!-- method 1 - sizing classes -->
+                <div class="list-group d-flex flex-row flex-wrap">
+                    {%for each in data%}
+                    <a href={{each.athlete.tffrs_link_for_athlete}} class="list-group-item w-50 list-group-item-action">
+                        {{each.athlete}}   {{each.pr}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

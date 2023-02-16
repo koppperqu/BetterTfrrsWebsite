@@ -45,5 +45,12 @@ def index(request):
 def athlete(request, athlete_id):
     return HttpResponse("Your looking at athlete with id %s." %athlete_id)
 
-def event(request, event_id):
-    return HttpResponse("Your looking at event with id %s." %event_id)
+def event(request, id):
+    from prs.models import Event,Personal_Record
+    data = Personal_Record.objects.all().filter(event_id=id)
+    return render(request, 'prs/event.html', {'data':data})
+
+def events(request):
+    from prs.models import Event
+    data = Event.objects.all()
+    return render(request, 'prs/events.html', {'data':data})
