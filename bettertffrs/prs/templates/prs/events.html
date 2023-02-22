@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<div class = "container my-3 w-50 pb-3" id = "events">
-	<div class="container w-75">
-	<h2>Events</h2>
+	<div class = "d-flex justify-content-center">
+		<h1 class="p-2 mt-3 mb-0 content w-fit rounded">Events</h1>
+	</div>	
+	<div class="container p-2 m-3 content rounded">
     <div class="container">
-                <!-- method 1 - sizing classes -->
                 <div class="list-group d-flex flex-row flex-wrap">
+					<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">					
                     {%for each in data%}
-						<a href="/prs/events/{{each.event_id}}" class="list-group-item w-50 list-group-item-action rounded-0">
+						<li class="rounded shadow" id = "listItem"><a href="/events/{{each.event_id}}" class="nav-link fs-4">
 						{{each}}
-						</a>
+						</a></li>
                     {% endfor %}
+					</ul>
             </div>
         </div>
 	</div>
-</div>
-</div>
 {% endblock %}

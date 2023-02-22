@@ -81,3 +81,5 @@ def getLast2WeeksPRs():
     f = open('recentPRs.json', "w")
     f.write(json.dumps(prepForJSON, indent=4))
     f.close()
+
+getLast2WeeksPRs()

@@ -19,6 +19,6 @@ from prs import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('prs/', include('prs.urls')),
+    path('', include('prs.urls')),
     path('admin/', admin.site.urls),
 ]

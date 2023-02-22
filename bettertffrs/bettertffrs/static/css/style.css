@@ -1,25 +1,29 @@
+.column {
+  flex: 1;
+}
+
 body{
 	background-color: #492F92;"
 }
 nav{
 	background-color: #FFC425;
-	letter-spacing: 1px;
+	letter-spacing: .1rem;
 }
-#navbar{	
-	letter-spacing: 2px;
+.w-fit{
+	width:fit-content;
 }
-#recentprs,#events{
-	text-align:center;
+.content{
 	background-color: rgba(255, 255, 255, 0.3);
 }
-#recentprs ul{
-	width:auto;
+#listItem{
+	text-align:center;
 	background-color: #FFC425;
 	border-color: #d89d00;
-	letter-spacing: 1px;
+	padding:.5rem;
+	margin:1rem;
 }
-#recentprs h3, #events h2{
-	letter-spacing: 2px;
+.myls{
+	letter-spacing: .1rem;
 }
 footer{
 	background-color: #FFC425;
@@ -27,4 +31,11 @@ footer{
 }
 footer a{
 	color: #4f4f4f;
+}
+
+@media (max-width: 600px){
+	#listItem{
+	padding:0.25rem;
+	margin:0.5rem;
+	}
 }

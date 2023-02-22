@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class = "d-flex justify-content-center">
+		<h1 class="p-2 mt-3 mb-0 content w-fit rounded">{{data.0.athlete}}</h1>
+	</div>	
+	<div class = "d-flex justify-content-center">
+		<h1 class="p-2 mt-3 mb-0 content w-fit rounded"><a href='{{data.0.athlete.tffrs_link_for_athlete}}' class="nav-link fs-4">TFRRS</a></h1>
+	</div>
+	<div class="container p-2 m-3 content rounded">
+    <div class="container">
+                <div class="list-group d-flex flex-row flex-wrap">
+					<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">					
+                    {%for each in data%}
+						<li class="rounded shadow" id = "listItem"><a href='{{each.athlete.tffrs_link_for_athlete}}' class="nav-link fs-4">
+							{{each.event}} <br> {{each.pr}}</a></li>
+                    {% endfor %}
+					</ul>
+            </div>
+        </div>
+	</div>
+{% endblock %}

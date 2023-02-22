@@ -1,24 +1,25 @@
-<div class="container"><h3 class="py-3 mb-0">
+{% extends "base.html" %}
+{% block content %}
+<div class = "d-flex justify-content-center">
+<h1 class="p-2 m-3 content w-fit rounded">Most Recent PR's</h1>
+</div>
+<div class="content w-fit rounded">
     {%for each in data%}
-        <h2>{{each.meetname}}</h2>
-        <h3>{{each.meetdate}}</h3>
-        <h5>{{each.numberofprs}} total prs <br> {{each.uniqueprs}} people pr'd</h5>
-        <h4>PRs</h4>
+		<div class = "d-flex justify-content-center">
+			<div class = "text-center myls w-fit">
+			<h2>{{each.meetname}}</h2>
+			<h3>{{each.meetdate}}</h3>
+			<h5>{{each.numberofprs}} total prs <br> {{each.uniqueprs}} people pr'd</h5>
+			<h4>PRs</h4>
+			</div>
+		</div>
         <div class="container">
-            <div class="row">
-                {% for eachRowOfX in each.prsatmeet %}
-                        {%for eachXPR in eachRowOfX%}
-                            <div class="col">
-                                <ul>
-                                {%for eachPR in eachXPR %}
-                                    <li>{{eachPR.athletename}} set a pr of {{eachPR.pr}} in {{eachPR.eventname}}</li>
-                                {% endfor %}
-                                </ul>
-                            </div>
-                        {% endfor %}
-                            <div class="w-100"></div>
-                {% endfor %}
-            </div>
+				<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">
+					{% for eachPR in each.prsatmeet %}
+						<li class="rounded shadow" id = "listItem">{{eachPR.athletename}} set a pr of {{eachPR.pr}} in {{eachPR.eventname}}</li>
+					{% endfor %}
+				</ul>
         </div>
     {% endfor %}
 </div>
+{% endblock %}

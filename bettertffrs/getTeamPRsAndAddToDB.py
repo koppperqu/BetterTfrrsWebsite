@@ -57,7 +57,7 @@ def getEventsandPRSandAddToDB(names,tfrrsLinks):
                 cur.execute("insert into prs_personal_record (athlete_id,event_id,pr) values(?,?,?)",(athleteID,eventID,marks[eventIndex]))
                 con.commit()
             else:
-                prID = "select pr_id from prs_personal_record where event_id = ? and athlete_id = ?",(eventID,athleteID)
+                prID = cur.execute("select pr_id from prs_personal_record where event_id = ? and athlete_id = ?",(eventID,athleteID)).fetchone()[0]
                 cur.execute("update prs_personal_record set pr = ? where pr_id = ?",(marks[eventIndex],prID,))
                 con.commit()
     con.close()
