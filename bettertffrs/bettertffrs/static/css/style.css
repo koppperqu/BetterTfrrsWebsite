@@ -1,19 +1,21 @@
 body {
-	--s: 6px; /* control the size */
-	
-	--g:#00000000 66%,#4BAAC4 68% 98%,#0000;
-	background:
-	  radial-gradient(30% 30% at 0%   30%,var(--g))
-	   var(--s) calc(9*var(--s)),
-	  radial-gradient(30% 30% at 100% 30%,var(--g))
-	   var(--s) calc(-1*var(--s)),
-	  radial-gradient(30% 30% at 30% 100%,var(--g))
-	   calc(10*var(--s)) 0,
-	  radial-gradient(30% 30% at 30% 0%  ,var(--g))
-	   #2561AA;
-	background-size: calc(20*var(--s)) calc(20*var(--s));
+	background-color: rgb(239, 239, 239);
+	background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+	background-image: url("/static/images/track_lanes.png");
+}
+.custom-btn{
+	background-color: #ffffff;
+	font-size: 1.5rem;
+}
+.custom-btn:hover {
+	background-color: #d2d2d2c4;
+    opacity: 1; /* Set the desired opacity value */
   }
-
-  .content{
-	background-color: #ffffffaf;
-  }
+.custom-header{
+	background-color:  rgb(255, 255, 255);
+}
+.content{
+background-color: #ffffffaf;
+}
