@@ -7,9 +7,9 @@
     <div class="container">
                 <div class="list-group d-flex flex-row flex-wrap">
 					<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">					
-                    {%for each in data%}
-						<li class="rounded shadow" id = "listItem"><a href="/events/{{each.event_id}}" class="nav-link fs-4">
-						{{each}}
+                    {%for each in data.events%}
+						<li class="rounded shadow" id = "listItem"><a href="{%url 'event' college_slug=data.college_slug event_slug=each.event_slug id=each.event_id%}" class="nav-link fs-4">
+						{{each.name}}
 						</a></li>
                     {% endfor %}
 					</ul>

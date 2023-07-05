@@ -1,5 +1,5 @@
 {% load static %}
-<html>
+<!DOCTYPE html>
   <head>
     {% block head-meta %}
   	<meta charset="utf-8">
@@ -15,28 +15,30 @@
     {% endblock %}
   </head>
 
-<header>
-<div class = "d-flex justify-content-center" id = "navbarDiv">
-	<nav class="navbar navbar-expand-lg navbar-light">
-	  <a class="navbar-brand" href="/">UWSP Track and Field PR's</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav">
-		  <li class="nav-item">
-			<a class="nav-link" href="/events">PR's by Event</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="/athletes">Athletes</a>
-		  </li>
-		</ul>
+  <header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container d-flex justify-content-center">
+		<a class="navbar-brand" href="/">Better Tfrrs</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			  <a class="nav-link" href="/events">PR's by Event</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/athletes">Athletes</a>
+			</li>
+		  </ul>
+		</div>
 	  </div>
 	</nav>
-	</div>
-</header>
+  </header>
+  
+  
 
-<div class="container w-fit">
+<div class="container content">
 {% block content %}{% endblock %}
 </div>
 
@@ -54,10 +56,7 @@
 	  <h5 class="mb-3" >links</h5>
 	  <ul class="list-unstyled mb-0">
 		<li class="mb-1">
-			<a href="https://www.tfrrs.org/teams/tf/WI_college_m_Wis_Stevens_Point.html">TFFRS</a>
-		</li>
-		<li class="mb-1">
-			<a href="https://athletics.uwsp.edu/sports/track-and-field/schedule">UWSP Track and Field Schedule</a>
+			<a href="https://www.tfrrs.org/leagues/1420.html">TFFRS</a>
 		</li>
 	  </ul>
 	</div>

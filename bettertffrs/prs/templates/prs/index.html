@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center content">
+    <div class="row">        
+        <h2 class="col-12">WIAC Colleges</h1>
+    </div>
+    <div class="row">
+        {%for each in data%}
+		<div class = "col-md-6">
+			<h4><a href="{% url 'college' college_slug=each.slug%}">{{each.name}}</a></h4>
+		</div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
