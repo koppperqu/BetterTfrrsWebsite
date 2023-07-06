@@ -30,8 +30,12 @@ def athletes(request, college_slug):
     return render(request, 'prs/athletes.html', {'data':data})
 
 def athlete(request, college_slug, athlete_id):
-    from prs.models import Athlete,Personal_Record
-    data = Personal_Record.objects.all().filter(athlete_id=athlete_id)
+    from prs.models import Personal_Record
+    prs = Personal_Record.objects.all().filter(athlete_id=athlete_id)
+    prsAndEventSlugs = []
+    for eachPR in prs:
+        prsAndEventSlugs.append({"event_slug":slugify(eachPR.event.event_name),"pr":eachPR})
+    data = {"college_slug":college_slug, "prsAndEventSlugs":prsAndEventSlugs}
     return render(request, 'prs/athlete.html', {'data':data})
 
 def events(request,college_slug):
@@ -51,5 +55,6 @@ def event(request, college_slug, event_slug , id):
     unslugged = college_slug.replace('-', ' ').replace('_', ' ')
     unslugged = unslugged.title()
     from prs.models import Event,Personal_Record
-    data = Personal_Record.objects.filter(event_id=id, athlete__college__college_name=unslugged)
+    prs = Personal_Record.objects.filter(event_id=id, athlete__college__college_name=unslugged)
+    data = {"prs":prs, "college_slug":college_slug}
     return render(request, 'prs/event.html', {'data':data})
