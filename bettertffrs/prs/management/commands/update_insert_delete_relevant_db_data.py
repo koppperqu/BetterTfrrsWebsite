@@ -1,13 +1,14 @@
 from django.core.management.base import BaseCommand
 from prs.models import *
 import json
+import fetchDataToAddOrUpdateDB
 
 class Command(BaseCommand):
     help = 'Update, insert, or delete relevant data in the database'
 
     def handle(self, *args, **options):
-        with open('data.json', 'r') as file:
-            json_data = json.load(file)
+        #call relevant functions from fetchData(etc).py
+        json_data=fetchDataToAddOrUpdateDB.getTheDataReturnJson()
 
         colleges = json_data.get('Colleges', [])
         total_colleges = len(colleges)

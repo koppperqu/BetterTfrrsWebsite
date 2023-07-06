@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_tags %}
 <!DOCTYPE html>
   <head>
     {% block head-meta %}
@@ -17,23 +18,18 @@
 
   <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <div class="container d-flex justify-content-center">
-		<a class="navbar-brand" href="/">Better Tfrrs</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-		  <ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-			  <a class="nav-link" href="/events">PR's by Event</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="/athletes">Athletes</a>
-			</li>
-		  </ul>
+		<div class="container">
+		  <a class="navbar-brand" href="/">Better Tfrrs</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+			  {% college_links %}
+			</ul>
+		  </div>
 		</div>
-	  </div>
-	</nav>
+	  </nav>
   </header>
   
   
@@ -50,10 +46,10 @@
 	  <p>
 		I made this website in my freetime, if there are issues you notice with the website you can shoot me an email and I can see if I can fix it, otherwise enjoy the website.
 	  </p>
-	  <a href = "mailto:akopp977@uwsp.edu?subject = UWSP Track PRs Website">Send Email</a>
+	  <a href = "mailto:kopp.austin@outlook.com?subject = UWSP Track PRs Website">Send Email</a>
 	</div>
 	<div class="col-md-6 mb-4">
-	  <h5 class="mb-3" >links</h5>
+	  <h5 class="mb-3" >WAIC TFRRS Page</h5>
 	  <ul class="list-unstyled mb-0">
 		<li class="mb-1">
 			<a href="https://www.tfrrs.org/leagues/1420.html">TFFRS</a>

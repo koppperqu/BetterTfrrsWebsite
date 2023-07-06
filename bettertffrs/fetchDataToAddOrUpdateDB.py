@@ -66,28 +66,6 @@ def getEachTeamsAthletesEventsAndPRAndPRLink(teamAthleteLinks,teamNames):
         print()
     return eachTeamsAthletesEventsAndPRAndPRLink
 
-"""
-Json data will be like this
-"Colleges":[
-    {
-        "CollegeName":name
-        "CollegeLink":link
-        "Athletes":[
-            {
-                "Name":name
-                "AthletesLink":link
-                "PRS":[
-                    {
-                        "EventName":name
-                        "EventMark" :mark
-                        "PRLink" :prlink
-                    }
-                ]
-            }
-        ]
-    }
-]
-"""
 def getTheDataReturnJson():
     teamLinks,teamNames = getTeamsLinksAndNames(soup)
     teamAthleteLinks, teamAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
@@ -119,6 +97,4 @@ def getTheDataReturnJson():
         jsonData["Colleges"].append(teamData)
 
     json_data = json.dumps(jsonData, indent=4)
-    with open("data.json", "w") as file:
-        file.write(json_data)
     return json_data

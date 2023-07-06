@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load custom_tags %}
 <div class="text-center">
 	<h2 class="col-12 display-4 custom-header p-2 rounded-top">PR's by</h2>
     <div class="row">
@@ -11,37 +12,8 @@
 		</div>
     </div>
     <div class="row">
-        <p>THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-            THIS WILL BE THE MOST RECENT PRS LIST
-
+        <p>
+            {% most_recent_prs data.slug %}
         </p>
     </div>
 </div>

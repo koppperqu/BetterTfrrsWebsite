@@ -1,0 +1,43 @@
+[
+    {
+        "meetname": "NCAA Division III Outdoor Track & Field Championships",
+        "meetdate": "May 25, 2023",
+        "numberofprs": 4,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Mason Barth",
+                "eventname": "Dec",
+                "pr": "6882"
+            },
+            {
+                "athletename": "Mason Barth",
+                "eventname": "100",
+                "pr": "11.36"
+            },
+            {
+                "athletename": "Mason Barth",
+                "eventname": "400",
+                "pr": "52.50"
+            },
+            {
+                "athletename": "Mason Barth",
+                "eventname": "1500",
+                "pr": "4:32.69"
+            }
+        ]
+    },
+    {
+        "meetname": "Augustana College Midwest Twilight Qualifier",
+        "meetdate": "May 18, 2023",
+        "numberofprs": 1,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Karter Rashke",
+                "eventname": "SP",
+                "pr": "16.06m"
+            }
+        ]
+    }
+]

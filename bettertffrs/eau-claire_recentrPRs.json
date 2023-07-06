@@ -1,0 +1,95 @@
+[
+    {
+        "meetname": "NCAA Division III Outdoor Track & Field Championships",
+        "meetdate": "May 25, 2023",
+        "numberofprs": 17,
+        "uniqueprs": 6,
+        "prsatmeet": [
+            {
+                "athletename": "Yakob Ekoue",
+                "eventname": "DT",
+                "pr": "56.55m"
+            },
+            {
+                "athletename": "Yakob Ekoue",
+                "eventname": "HT",
+                "pr": "59.71m"
+            },
+            {
+                "athletename": "Max Foland",
+                "eventname": "Dec",
+                "pr": "6661"
+            },
+            {
+                "athletename": "Max Foland",
+                "eventname": "LJ",
+                "pr": "6.88m"
+            },
+            {
+                "athletename": "Max Foland",
+                "eventname": "PV",
+                "pr": "4.00m"
+            },
+            {
+                "athletename": "Max Foland",
+                "eventname": "JT",
+                "pr": "49.30m"
+            },
+            {
+                "athletename": "Stefan Klechefski",
+                "eventname": "100",
+                "pr": "10.53"
+            },
+            {
+                "athletename": "Stefan Klechefski",
+                "eventname": "200",
+                "pr": "21.49"
+            },
+            {
+                "athletename": "Tommy Mestnik",
+                "eventname": "LJ",
+                "pr": "6.68m"
+            },
+            {
+                "athletename": "Tommy Mestnik",
+                "eventname": "HJ",
+                "pr": "1.78m"
+            },
+            {
+                "athletename": "Tommy Mestnik",
+                "eventname": "400",
+                "pr": "52.21"
+            },
+            {
+                "athletename": "Tommy Mestnik",
+                "eventname": "JT",
+                "pr": "58.74m"
+            },
+            {
+                "athletename": "Mason Shea",
+                "eventname": "3000S",
+                "pr": "8:53.18"
+            },
+            {
+                "athletename": "Mitch Stegeman",
+                "eventname": "Dec",
+                "pr": "7165"
+            },
+            {
+                "athletename": "Mitch Stegeman",
+                "eventname": "LJ",
+                "pr": "6.89m"
+            },
+            {
+                "athletename": "Mitch Stegeman",
+                "eventname": "JT",
+                "pr": "54.82m"
+            },
+            {
+                "athletename": "Mitch Stegeman",
+                "eventname": "1500",
+                "pr": "4:39.40"
+            }
+        ]
+    }
+]
