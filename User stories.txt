@@ -1,3 +1,9 @@
+Nav bar will contain a colleges tab with a link to each college,
+After picking a college then the athlete or event tabs will show up
+clicking one of those should take you to the events page or athletes page for
+the college you are currently lookign at and will stay that way while looking at
+a certain college until a different college is picked
+
 A user from any school can go to the website, pick their school and see their schools prs
     oshkosh, eau claire, uwsp, stout, whitewater etc.
 A user look for prs by event groun

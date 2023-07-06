@@ -1,21 +1,46 @@
+:root {
+	--primary-color: #f9f9f9;
+	--secondary-color: #c5d1ed;
+	--secondary-color-hover: #7b8396;
+	--tertiary-color: #82c0ccb5;
+	--background-color:#f9f9f9b2;
+	--accent-color:#FFA62B;
+	--text-color:#EDE7E3;	
+	--alt-text-color:#918f8d;
+	--header-color: #275763;
+	--gradient:linear-gradient(180deg,#484d5c 0,#2c3146 24%,#2c3146 74%,#181c26);
+	--alt-gradient:linear-gradient(180deg,#5e6476 0,#434b6b 24%,#50597a);
+  }
+
 body {
-	background-color: rgb(239, 239, 239);
+	background-color: var(--primary-color);
 	background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% auto;
 	background-image: url("/static/images/track_lanes.png");
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 .custom-btn{
-	background-color: #ffffff;
+	background: var(--alt-gradient);
 	font-size: 1.5rem;
+	color: var(--text-color);
 }
 .custom-btn:hover {
-	background-color: #d2d2d2c4;
-    opacity: 1; /* Set the desired opacity value */
+	background-color: var(--secondary-color-hover);
+	color: var(--accent-color);
   }
 .custom-header{
-	background-color:  rgb(255, 255, 255);
+	background: var(--gradient);
+	color:var(--text-color);
 }
 .content{
-background-color: #ffffffaf;
+background-color: var(--background-color);
+}
+footer{
+	letter-spacing: 2px;
+}
+footer a{
+	color: #4f4f4f;
 }
