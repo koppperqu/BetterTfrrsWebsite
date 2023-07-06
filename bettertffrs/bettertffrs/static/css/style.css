@@ -22,6 +22,9 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+.custom-pr-li{
+	font-size: x-large;
+}
 .custom-btn{
 	background: var(--alt-gradient);
 	font-size: 1.5rem;

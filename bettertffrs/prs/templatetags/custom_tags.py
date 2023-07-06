@@ -27,25 +27,23 @@ def most_recent_prs(college_slug):
     f = open(recentPrsFile)
     prsJson = json.load(f)
     f.close()
-    html='<div class="content w-fit rounded">'
+    html=''
     for eachMeet in prsJson:
         html+=f'''
-        <div class = "d-flex justify-content-center">
-			<div class = "text-center myls w-fit">
-			<h2>{eachMeet['meetname']}</h2>
+        <div class = "justify-content-center d-inline-block">
+			<div class = "text-center">
+			<h2 class="col-12 display-4 custom-header p-2 rounded">{eachMeet['meetname']}</h2>
 			<h3>{eachMeet['meetdate']}</h3>
-			<h5>{eachMeet['numberofprs']} total prs <br> {eachMeet['uniqueprs']} people pr'd</h5>
-			<h4>PRs</h4>
+			<h5>{eachMeet['numberofprs']} total pr's | {eachMeet['uniqueprs']} people pr'd</h5>
 			</div>
 		</div>
-        <div class="container">
-				<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">'''
+        <div class="container d-inline-block">
+				<ul class = "list-unstyled justify-content-center">'''
         for eachPR in eachMeet['prsatmeet']:
-            html+=f'<li class="rounded shadow" id = "listItem">{eachPR["athletename"]} set a pr of {eachPR["pr"]} in {eachPR["eventname"]}</li>'
+            html+=f'<li class="custom-pr-li w-fit rounded shadow">{eachPR["athletename"]} set a pr of {eachPR["pr"]} in {eachPR["eventname"]}</li>'
         html+='''</ul>
             </div>
             '''
-    html+='</div>'
     return mark_safe(html)
 
 
