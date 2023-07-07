@@ -85,7 +85,7 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
                             "uniqueprs":uniqueNameCount,
                             "prsatmeet":listOfPRS}
                 prepForJSON.append(jsonMeetOBJ)
-        fileName = f'{slugify(teamNames[teamIndex])}_recentrPRs.json'
+        fileName = f'/BetterTfrrsWebsite/bettertffrs/{slugify(teamNames[teamIndex])}_recentrPRs.json'
         f = open(fileName, "w")
         f.write(json.dumps(prepForJSON, indent=4))
         f.close()
