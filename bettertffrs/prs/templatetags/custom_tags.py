@@ -22,7 +22,7 @@ def college_links():
 
 @register.simple_tag
 def most_recent_prs(college_slug):
-    recentPrsFile=f'{college_slug}_recentrPRs.json'
+    recentPrsFile=f'/BetterTfrrsWebsite/bettertffrs/{college_slug}_recentrPRs.json'
     import json  
     f = open(recentPrsFile)
     prsJson = json.load(f)
