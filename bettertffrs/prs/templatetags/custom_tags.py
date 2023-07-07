@@ -30,19 +30,22 @@ def most_recent_prs(college_slug):
     html=''
     for eachMeet in prsJson:
         html+=f'''
-        <div class = "justify-content-center d-inline-block">
-			<div class = "text-center">
-			<h2 class="col-12 display-4 custom-header p-2 rounded">{eachMeet['meetname']}</h2>
+        <div class = "justify-content-center">
+			<div class = "text-center content">
+			<h2 class="custom-header p-2 mt-2 rounded">{eachMeet['meetname']}</h2>
 			<h3>{eachMeet['meetdate']}</h3>
-			<h5>{eachMeet['numberofprs']} total pr's | {eachMeet['uniqueprs']} people pr'd</h5>
+			<h5 class="pb-3">{eachMeet['numberofprs']} total pr's | {eachMeet['uniqueprs']} people pr'd</h5>
 			</div>
 		</div>
-        <div class="container d-inline-block">
-				<ul class = "list-unstyled justify-content-center">'''
+        <div class="justify-content-center container">
+				<p class = "fs-5">'''
         for eachPR in eachMeet['prsatmeet']:
-            html+=f'<li class="custom-pr-li w-fit rounded shadow">{eachPR["athletename"]} set a pr of {eachPR["pr"]} in {eachPR["eventname"]}</li>'
-        html+='''</ul>
-            </div>
+            html+=f'{eachPR["athletename"]} set a pr of {eachPR["pr"]} in {eachPR["eventname"]}<br>'
+        html+='</div>'
+    if(html==''):
+        html='''
+            <h1>No Recent PRs<h1>
+            <p class="fs-4 px-4">There have been no recent prs in the last two meets please feel free to look at the prs sorted by event or athlete by using the links above!</p>
             '''
     return mark_safe(html)
 

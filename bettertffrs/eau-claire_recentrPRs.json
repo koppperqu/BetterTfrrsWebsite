@@ -2,8 +2,8 @@
     {
         "meetname": "NCAA Division III Outdoor Track & Field Championships",
         "meetdate": "May 25, 2023",
-        "numberofprs": 17,
-        "uniqueprs": 6,
+        "numberofprs": 30,
+        "uniqueprs": 9,
         "prsatmeet": [
             {
                 "athletename": "Yakob Ekoue",
@@ -89,6 +89,84 @@
                 "athletename": "Mitch Stegeman",
                 "eventname": "1500",
                 "pr": "4:39.40"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "Hep",
+                "pr": "4746"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "100H",
+                "pr": "14.42"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "200",
+                "pr": "25.48"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "LJ",
+                "pr": "5.41m"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "JT",
+                "pr": "26.18m"
+            },
+            {
+                "athletename": "Emilee Booker",
+                "eventname": "800",
+                "pr": "2:22.97"
+            },
+            {
+                "athletename": "Emma Gruen",
+                "eventname": "Hep",
+                "pr": "4536"
+            },
+            {
+                "athletename": "Emma Gruen",
+                "eventname": "200",
+                "pr": "27.05"
+            },
+            {
+                "athletename": "Emma Gruen",
+                "eventname": "LJ",
+                "pr": "5.23m"
+            },
+            {
+                "athletename": "Jane Kautz",
+                "eventname": "Hep",
+                "pr": "4510"
+            },
+            {
+                "athletename": "Jane Kautz",
+                "eventname": "200",
+                "pr": "26.46"
+            },
+            {
+                "athletename": "Jane Kautz",
+                "eventname": "JT",
+                "pr": "32.96m"
+            },
+            {
+                "athletename": "Jane Kautz",
+                "eventname": "800",
+                "pr": "2:19.78"
+            }
+        ]
+    },
+    {
+        "meetname": "UWL Final Qualifier",
+        "meetdate": "May 18, 2023",
+        "numberofprs": 1,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Teagan Jones",
+                "eventname": "DT",
+                "pr": "44.06m"
             }
         ]
     }

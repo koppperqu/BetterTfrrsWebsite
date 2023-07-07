@@ -2,8 +2,8 @@
     {
         "meetname": "NCAA Division III Outdoor Track & Field Championships",
         "meetdate": "May 25, 2023",
-        "numberofprs": 4,
-        "uniqueprs": 3,
+        "numberofprs": 17,
+        "uniqueprs": 12,
         "prsatmeet": [
             {
                 "athletename": "Sam Blaskowski",
@@ -24,6 +24,71 @@
                 "athletename": "Cael Schoemann",
                 "eventname": "800",
                 "pr": "1:49.40"
+            },
+            {
+                "athletename": "Allison Anderson",
+                "eventname": "100H",
+                "pr": "15.52"
+            },
+            {
+                "athletename": "Allison Anderson",
+                "eventname": "200",
+                "pr": "26.72"
+            },
+            {
+                "athletename": "Allison Anderson",
+                "eventname": "800",
+                "pr": "2:21.35"
+            },
+            {
+                "athletename": "Skye Digman",
+                "eventname": "DT",
+                "pr": "48.67m"
+            },
+            {
+                "athletename": "Lauren Jarrett",
+                "eventname": "100",
+                "pr": "11.61"
+            },
+            {
+                "athletename": "Lauren Jarrett",
+                "eventname": "200",
+                "pr": "24.09"
+            },
+            {
+                "athletename": "Miah Keller",
+                "eventname": "TJ",
+                "pr": "12.13m"
+            },
+            {
+                "athletename": "Emma Lawrence",
+                "eventname": "400H",
+                "pr": "59.03"
+            },
+            {
+                "athletename": "Emma Malooly",
+                "eventname": "3000S",
+                "pr": "10:32.86"
+            },
+            {
+                "athletename": "Brooke McDowell",
+                "eventname": "100H",
+                "pr": "14.49"
+            },
+            {
+                "athletename": "Maddy Vantassel",
+                "eventname": "3000S",
+                "pr": "10:44.71"
+            },
+            {
+                "athletename": "Skylar White",
+                "eventname": "200",
+                "pr": "27.49"
+            },
+            {
+                "athletename": "Skylar White",
+                "eventname": "800",
+                "pr": "2:21.32"
             }
         ]
     },

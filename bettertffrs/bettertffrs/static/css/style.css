@@ -11,7 +11,9 @@
 	--gradient:linear-gradient(180deg,#484d5c 0,#2c3146 24%,#2c3146 74%,#181c26);
 	--alt-gradient:linear-gradient(180deg,#5e6476 0,#434b6b 24%,#50597a);
   }
-
+.navbar{
+	background: var(--primary-color);
+}
 body {
 	background-color: var(--primary-color);
 	background-repeat: no-repeat;

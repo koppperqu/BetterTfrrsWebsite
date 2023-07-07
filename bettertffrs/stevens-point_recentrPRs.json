@@ -2,8 +2,8 @@
     {
         "meetname": "Augustana College Midwest Twilight Qualifier",
         "meetdate": "May 18, 2023",
-        "numberofprs": 8,
-        "uniqueprs": 7,
+        "numberofprs": 10,
+        "uniqueprs": 9,
         "prsatmeet": [
             {
                 "athletename": "Zach Brandenburg",
@@ -44,6 +44,16 @@
                 "athletename": "Tyler Nosko",
                 "eventname": "1500",
                 "pr": "4:04.53"
+            },
+            {
+                "athletename": "Gabri Gaines",
+                "eventname": "3000S",
+                "pr": "11:46.24"
+            },
+            {
+                "athletename": "Natalie Johnson",
+                "eventname": "3000S",
+                "pr": "12:00.42"
             }
         ]
     }

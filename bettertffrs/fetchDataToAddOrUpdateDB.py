@@ -68,7 +68,15 @@ def getEachTeamsAthletesEventsAndPRAndPRLink(teamAthleteLinks,teamNames):
 
 def getTheDataReturnJson():
     teamLinks,teamNames = getTeamsLinksAndNames(soup)
-    teamAthleteLinks, teamAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
+    teamMaleAthleteLinks, teamMaleAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
+    womensLinks = []
+    for each in teamLinks:
+        womensLinks.append(each.replace('_m_','_f_'))
+    teamFemaleAthleteLinks, teamFemaleAthleteNames = getTeamsAthleteLinksAndNames(womensLinks)
+    teamAthleteLinks,teamAthleteNames=[],[]
+    for index,each in enumerate(teamMaleAthleteLinks):
+        teamAthleteLinks.append(each+teamFemaleAthleteLinks[index])
+        teamAthleteNames.append(teamMaleAthleteNames[index]+teamFemaleAthleteNames[index])
     eachTeamsAthletesEventsAndPRAndPRLink = getEachTeamsAthletesEventsAndPRAndPRLink(teamAthleteLinks, teamNames)
     jsonData = {
         "Colleges": []
@@ -95,6 +103,4 @@ def getTheDataReturnJson():
                 athleteData["PRS"].append(prData)
             teamData["Athletes"].append(athleteData)
         jsonData["Colleges"].append(teamData)
-
-    json_data = json.dumps(jsonData, indent=4)
-    return json_data
+    return jsonData

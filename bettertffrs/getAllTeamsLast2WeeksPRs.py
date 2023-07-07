@@ -27,7 +27,15 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
     html = urlopen(wiacTfrrsURL)
     soup=BeautifulSoup(html.read(), "html.parser")
     teamLinks,teamNames = getTeamsLinksAndNames(soup)
-    teamAthleteLinks, teamAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
+    teamMaleAthleteLinks, teamMaleAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
+    womensLinks = []
+    for each in teamLinks:
+        womensLinks.append(each.replace('_m_','_f_'))
+    teamFemaleAthleteLinks, teamFemaleAthleteNames = getTeamsAthleteLinksAndNames(womensLinks)
+    teamAthleteLinks,teamAthleteNames=[],[]
+    for index,each in enumerate(teamMaleAthleteLinks):
+        teamAthleteLinks.append(each+teamFemaleAthleteLinks[index])
+        teamAthleteNames.append(teamMaleAthleteNames[index]+teamFemaleAthleteNames[index])
     for teamIndex, eachTeamLink in enumerate(teamLinks):
         html = urlopen(eachTeamLink)
         soup=BeautifulSoup(html.read(), "html.parser")

@@ -2,8 +2,8 @@
     {
         "meetname": "NCAA Division III Outdoor Track & Field Championships",
         "meetdate": "May 25, 2023",
-        "numberofprs": 10,
-        "uniqueprs": 4,
+        "numberofprs": 12,
+        "uniqueprs": 6,
         "prsatmeet": [
             {
                 "athletename": "RJ Bosshart",
@@ -54,14 +54,24 @@
                 "athletename": "Steven Potter",
                 "eventname": "1500",
                 "pr": "3:46.93"
+            },
+            {
+                "athletename": "Amelia Lehman",
+                "eventname": "1500",
+                "pr": "4:26.63"
+            },
+            {
+                "athletename": "Cyna Madigan",
+                "eventname": "800",
+                "pr": "2:09.79"
             }
         ]
     },
     {
         "meetname": "Augustana College Midwest Twilight Qualifier",
         "meetdate": "May 18, 2023",
-        "numberofprs": 2,
-        "uniqueprs": 2,
+        "numberofprs": 3,
+        "uniqueprs": 3,
         "prsatmeet": [
             {
                 "athletename": "John Ford",
@@ -72,6 +82,11 @@
                 "athletename": "Reid Marquardt",
                 "eventname": "400",
                 "pr": "50.37"
+            },
+            {
+                "athletename": "Megan Hunt",
+                "eventname": "LJ",
+                "pr": "5.70m"
             }
         ]
     }

@@ -25,8 +25,8 @@
     {
         "meetname": "Augustana College Midwest Twilight Qualifier",
         "meetdate": "May 18, 2023",
-        "numberofprs": 3,
-        "uniqueprs": 3,
+        "numberofprs": 4,
+        "uniqueprs": 4,
         "prsatmeet": [
             {
                 "athletename": "Justin Krause",
@@ -42,6 +42,11 @@
                 "athletename": "Gunner Schlender",
                 "eventname": "1500",
                 "pr": "3:50.91"
+            },
+            {
+                "athletename": "Paige Fassbender",
+                "eventname": "800",
+                "pr": "2:11.33"
             }
         ]
     }

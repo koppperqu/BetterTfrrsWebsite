@@ -7,10 +7,9 @@ class Command(BaseCommand):
     help = 'Update, insert, or delete relevant data in the database'
 
     def handle(self, *args, **options):
-        #call relevant functions from fetchData(etc).py
         json_data=fetchDataToAddOrUpdateDB.getTheDataReturnJson()
 
-        colleges = json_data.get('Colleges', [])
+        colleges = json_data.get('Colleges')
         total_colleges = len(colleges)
 
         for college_index, college_data in enumerate(colleges, 1):
@@ -48,28 +47,4 @@ class Command(BaseCommand):
                         pr_link = pr_link
                     )
 
-            self.stdout.write('\n')  # Move to the next line after processing all athletes of a college
-
-
-"""
-Json data will be like this
-"Colleges":[
-    {
-        "CollegeName":name
-        "CollegeLink":link
-        "Athletes":[
-            {
-                "Name":name
-                "AthletesLink":link
-                "PRS":[
-                    {
-                        "EventName":name
-                        "EventMark" :mark
-                        "PRLink" :prlink
-                    }
-                ]
-            }
-        ]
-    }
-]
-"""
+            self.stdout.write('\n')
