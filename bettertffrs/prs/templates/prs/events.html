@@ -1,19 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-	<div class = "d-flex justify-content-center">
-		<h1 class="p-2 mt-3 mb-0 content w-fit rounded">Events</h1>
-	</div>	
-	<div class="container p-2 m-3 content rounded">
-    <div class="container">
-                <div class="list-group d-flex flex-row flex-wrap">
-					<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">					
-                    {%for each in data%}
-						<li class="rounded shadow" id = "listItem"><a href="/events/{{each.event_id}}" class="nav-link fs-4">
-						{{each}}
-						</a></li>
-                    {% endfor %}
-					</ul>
-            </div>
-        </div>
-	</div>
+<div class="text-center">
+	<h2 class="col-12 display-4 custom-header p-2 rounded-top">Events</h2>
+		<div class="row justify-content-center">
+			{%for each in data.events%}
+			<div class="col-4 col-md-2 p-1 m-1">				
+				<a class = "btn custom-btn w-100 h-100" href="{% url 'event' college_slug=data.college_slug event_slug=each.event_slug id=each.event_id %}">{{ each.name }}</a>
+			</div>
+			{% endfor %}
+		</div>
+</div>
 {% endblock %}

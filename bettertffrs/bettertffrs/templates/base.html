@@ -1,5 +1,6 @@
 {% load static %}
-<html>
+{% load custom_tags %}
+<!DOCTYPE html>
   <head>
     {% block head-meta %}
   	<meta charset="utf-8">
@@ -15,49 +16,43 @@
     {% endblock %}
   </head>
 
-<header>
-<div class = "d-flex justify-content-center" id = "navbarDiv">
-	<nav class="navbar navbar-expand-lg navbar-light">
-	  <a class="navbar-brand" href="/">UWSP Track and Field PR's</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav">
-		  <li class="nav-item">
-			<a class="nav-link" href="/events">PR's by Event</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="/athletes">Athletes</a>
-		  </li>
-		</ul>
-	  </div>
-	</nav>
-	</div>
-</header>
+  <header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+		  <a class="fs-4 navbar-brand" href="/">Better Tfrrs</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+			  {% college_links %}
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+  </header>
+  
+  
 
-<div class="container w-fit">
+<div class="container content pb-2 px-0 mt-0 my-sm-3 rounded">
 {% block content %}{% endblock %}
 </div>
 
-<footer>
-<div class="container p-4">
+<footer class="mt-auto pt-3">
+<div class="container ">
   <div class="row text-center">
 	<div class="col-md-6 mb-4">
 	  <h5 class="mb-3">About</h5>
 	  <p>
 		I made this website in my freetime, if there are issues you notice with the website you can shoot me an email and I can see if I can fix it, otherwise enjoy the website.
 	  </p>
-	  <a href = "mailto:akopp977@uwsp.edu?subject = UWSP Track PRs Website">Send Email</a>
+	  <a href = "mailto:kopp.austin@outlook.com?subject = UWSP Track PRs Website">Send Email</a>
 	</div>
 	<div class="col-md-6 mb-4">
-	  <h5 class="mb-3" >links</h5>
+	  <h5 class="mb-3" >WIAC TFRRS Page</h5>
 	  <ul class="list-unstyled mb-0">
 		<li class="mb-1">
-			<a href="https://www.tfrrs.org/teams/tf/WI_college_m_Wis_Stevens_Point.html">TFFRS</a>
-		</li>
-		<li class="mb-1">
-			<a href="https://athletics.uwsp.edu/sports/track-and-field/schedule">UWSP Track and Field Schedule</a>
+			<a href="https://www.tfrrs.org/leagues/1420.html">TFFRS</a>
 		</li>
 	  </ul>
 	</div>

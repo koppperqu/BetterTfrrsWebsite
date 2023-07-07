@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-	<div class = "d-flex justify-content-center">
-		<h1 class="p-2 mt-3 mb-0 content w-fit rounded">{{data.0.athlete}}</h1>
-	</div>	
-	<div class = "d-flex justify-content-center">
-		<h1 class="p-2 mt-3 mb-0 content w-fit rounded"><a href='{{data.0.athlete.tffrs_link_for_athlete}}' class="nav-link fs-4">TFRRS</a></h1>
+<div class="text-center">
+	<h2 class="col-12 display-4 custom-header p-2 rounded-top">{{data.prsAndEventSlugs.0.pr.athlete}}</h2>
+	<div class="row justify-content-center">
+		<form action="{{data.prsAndEventSlugs.0.pr.athlete.athlete_link}}" method="GET">
+			<button type="submit" class="btn btn-link custom-btn" style="text-decoration: none;">
+				Go to TFRRS page
+			</button>
+		</form>
+		{%for each in data.prsAndEventSlugs%}
+		<div class="col-5 col-md-3 col-lg-2 m-1 p-1 d-flex flex-column">			
+			<a class = "mb-1 flex-grow-1 btn w-100 custom-btn" href="{% url 'event' college_slug=data.college_slug event_slug=each.event_slug id=each.pr.event.event_id %}">{{ each.pr.event }}</a>
+			<a class = "w-100 btn w-100 custom-btn" href="{{each.pr.pr_link}}">{{each.pr.pr}}</a>
+		</div>
+		{% endfor %}
 	</div>
-	<div class="container p-2 m-3 content rounded">
-    <div class="container">
-                <div class="list-group d-flex flex-row flex-wrap">
-					<ul class = "list-unstyled d-flex justify-content-center align-content-start flex-wrap">					
-                    {%for each in data%}
-						<li class="rounded shadow" id = "listItem"><a href='{{each.athlete.tffrs_link_for_athlete}}' class="nav-link fs-4">
-							{{each.event}} <br> {{each.pr}}</a></li>
-                    {% endfor %}
-					</ul>
-            </div>
-        </div>
-	</div>
+</div>
 {% endblock %}

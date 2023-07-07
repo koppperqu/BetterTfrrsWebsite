@@ -1,0 +1,14 @@
+A user from any school can go to the website, pick their school and see their schools prs
+    oshkosh, eau claire, uwsp, stout, whitewater etc.
+A user look for prs by event groun
+A user can look for prs by individuals name
+*Implement ajax for above search*
+NEEDED IMPROVMENT Display event names instead of sp,dt,100 etc
+User can click on any mark and go the the link for the meet for that pr (NEED TO ADD SCRPAING SUPPORT FOR THIS)
+User can click on the event for the pr for a person and go to their schools page with the prs for that event
+User can click the tfrrs link below the name/next to the name of the athlete to go to their tfrrs profile
+After click school, the user is shown prs at the most recent 4 meets, add disclaimer at bottom for how it works
+    i.e if you pr at last meet and most recent only shows pr at most recent so as time goes on # of prs at older
+    meets will decreaase
+
+
