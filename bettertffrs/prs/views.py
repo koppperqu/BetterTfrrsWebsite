@@ -4,6 +4,12 @@ from django.shortcuts import get_object_or_404
 from django.utils.text import slugify
 # Create your views here.
 
+def athletesearch(request):
+    #look at all athletes, look for any that match the search data and return them
+    #then display them?
+    data=''
+    return render(request, 'prs/athletes.html', {'data':data})
+
 def index(request):
     from prs.models import College
     colleges = College.objects.all()
