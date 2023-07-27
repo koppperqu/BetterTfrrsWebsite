@@ -1,0 +1,60 @@
+[
+    {
+        "meetname": "Augustana College Midwest Twilight Qualifier",
+        "meetdate": "May 18, 2023",
+        "numberofprs": 10,
+        "uniqueprs": 9,
+        "prsatmeet": [
+            {
+                "athletename": "Zach Brandenburg",
+                "eventname": "5000",
+                "pr": "16:31.83"
+            },
+            {
+                "athletename": "Eric East",
+                "eventname": "800",
+                "pr": "2:00.85"
+            },
+            {
+                "athletename": "Gus Foster",
+                "eventname": "800",
+                "pr": "2:04.22"
+            },
+            {
+                "athletename": "Braedon Gilles",
+                "eventname": "800",
+                "pr": "1:50.92"
+            },
+            {
+                "athletename": "Chance Jampole",
+                "eventname": "100",
+                "pr": "11.30"
+            },
+            {
+                "athletename": "Chance Jampole",
+                "eventname": "200",
+                "pr": "22.39"
+            },
+            {
+                "athletename": "Mason Mead",
+                "eventname": "400",
+                "pr": "49.73"
+            },
+            {
+                "athletename": "Tyler Nosko",
+                "eventname": "1500",
+                "pr": "4:04.53"
+            },
+            {
+                "athletename": "Gabri Gaines",
+                "eventname": "3000S",
+                "pr": "11:46.24"
+            },
+            {
+                "athletename": "Natalie Johnson",
+                "eventname": "3000S",
+                "pr": "12:00.42"
+            }
+        ]
+    }
+]

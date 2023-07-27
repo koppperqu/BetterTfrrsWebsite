@@ -2,19 +2,12 @@
 {% block content %}
 <div class="text-center">
 	<h2 class="col-12 display-4 custom-header p-2 rounded-top">Athletes</h2>
-	<div class="input-group py-2 px-4">
-		<input type="text" id="athlete-search-box" class="form-control" placeholder="Search athlete...">
-	</div>
-
-	<div id="athlete-container" class="row justify-content-center">
-		<div id="no-matching-athletes"></div>
+	<div class="row justify-content-center">
 		{%for each in data.athletes%}
-		<div class="athlete col-5 col-md-3 col-lg-2 p-1 m-1 d-flex flex-column">
-			<a class="btn custom-btn w-100 h-100"
-				href="{% url 'athlete' college_slug=data.slug athlete_id=each.athlete_id %}">{{ each }}</a>
+		<div class="col-5 col-md-3 col-lg-2 p-1 m-1 d-flex flex-column">			
+            <a class = "btn custom-btn w-100 h-100" href="{% url 'athlete' college_slug=data.slug athlete_id=each.athlete_id %}">{{ each }}</a>
 		</div>
 		{% endfor %}
 	</div>
 </div>
-<script src="/static/js/athlete-filtering.js"></script>
 {% endblock %}
