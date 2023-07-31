@@ -2,7 +2,9 @@ from datetime import datetime
 from itertools import groupby
 from fetchDataToAddOrUpdateDB import *
 from django.utils.text import slugify
+import os
 
+cwd =os.getcwd()
 wiacTfrrsURL="https://www.tfrrs.org/leagues/1420.html"
 
 def getTeamsLastXMeets(soup, numberOfMeets=2):
@@ -85,7 +87,7 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
                             "uniqueprs":uniqueNameCount,
                             "prsatmeet":listOfPRS}
                 prepForJSON.append(jsonMeetOBJ)
-        fileName = f'/BetterTfrrsWebsite/bettertffrs/{slugify(teamNames[teamIndex])}_recentrPRs.json'
+        fileName = f'{cwd}/{slugify(teamNames[teamIndex])}_recentrPRs.json'
         f = open(fileName, "w")
         f.write(json.dumps(prepForJSON, indent=4))
         f.close()

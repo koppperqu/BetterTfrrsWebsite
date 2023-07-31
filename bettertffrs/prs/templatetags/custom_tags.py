@@ -3,6 +3,8 @@ from prs.models import College
 from django.utils.text import slugify
 from django.urls import reverse
 from django.utils.safestring import mark_safe
+import os
+
 
 register = template.Library()
 
@@ -22,7 +24,8 @@ def college_links():
 
 @register.simple_tag
 def most_recent_prs(college_slug):
-    recentPrsFile=f'/BetterTfrrsWebsite/bettertffrs/{college_slug}_recentrPRs.json'
+    cwd =os.getcwd()
+    recentPrsFile=f'{cwd}/{college_slug}_recentrPRs.json'
     import json  
     f = open(recentPrsFile)
     prsJson = json.load(f)

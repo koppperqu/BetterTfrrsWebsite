@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+cwd=os.getcwd()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-qc8@tp92^i()$szt52bf45jow-&unsqfbvw(od*uozsch^dck#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.bettertfrrs.com','uwsp.bettertfrrs.com','bettertfrrs.com']
+ALLOWED_HOSTS = ['www.bettertfrrs.com','uwsp.bettertfrrs.com','bettertfrrs.com','127.0.0.1']
 
 
 # Application definition
@@ -118,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = "BetterTfrrsWebsite/bettertffrs/bettertffrs/static/"
+STATIC_ROOT = f"{cwd}/bettertffrs/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
