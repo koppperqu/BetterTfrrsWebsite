@@ -3,7 +3,8 @@ from prs.models import College
 from django.utils.text import slugify
 from django.urls import reverse
 from django.utils.safestring import mark_safe
-import os
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 register = template.Library()
@@ -24,8 +25,7 @@ def college_links():
 
 @register.simple_tag
 def most_recent_prs(college_slug):
-    cwd =os.getcwd()
-    recentPrsFile=f'{cwd}/{college_slug}_recentrPRs.json'
+    recentPrsFile=BASE_DIR / f'{college_slug}_recentrPRs.json'
     import json  
     f = open(recentPrsFile)
     prsJson = json.load(f)
@@ -51,10 +51,3 @@ def most_recent_prs(college_slug):
             <p class="fs-4 px-4">There have been no recent prs in the last two meets please feel free to look at the prs sorted by event or athlete by using the links above!</p>
             '''
     return mark_safe(html)
-
-
-# return render(request, 'prs/recentPRs.html', {'data':data})
-
-# <div class = "d-flex justify-content-center">
-# <h1 class="p-2 m-3 content w-fit rounded">Most Recent PR's</h1>
-# </div>
